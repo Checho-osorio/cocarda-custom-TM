@@ -146,11 +146,21 @@
                   "type": "string",
                   "default": "",
                   "description": "Margin TOP en la PLP, ingrese medidas en pixeles ej: 100px"
+                },
+                "viewSite": {
+                  "title": "¿ Donde se visualizara ?",
+                  "type": "string",
+                  "enum": ["PDP", "PLP", "Ambos"],
+                  "widget": {
+                    "ui:widget": "radio"
+                  }
                 }
+
 
 
                 }
               },
+              "required": ["viewSite"],
               "default": []
             }
           }

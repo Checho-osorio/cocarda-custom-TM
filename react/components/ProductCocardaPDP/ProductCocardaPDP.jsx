@@ -3,7 +3,6 @@ import { useProductPriceState } from '../hooks/UseStateProduct'
 import CocardaItemText from '../ProductCocarda/CocardaItemText';
 import CocardaItemImage from '../ProductCocarda/CocardaItemImage';
 import { useRuntime } from 'vtex.render-runtime'
-import PDPleftMargin from '../../utils/PDPleftMargin';
 
 
 import Styles from '../ProductCocarda/StylesCocarda.css'
@@ -59,6 +58,10 @@ const ProductCocardaPDP = () => {
       <div className={Styles.ContentCocardas_Item__left_PDP}>
         {
           cocardas?.map((item,index)=>(
+            console.log('checho item', item.viewSite ),
+
+            item.viewSite === "Ambos" || item.viewSite === "PDP" ?
+
             item.posicionHorizontal == "izquierda" &&
             <>
               {
@@ -72,6 +75,10 @@ const ProductCocardaPDP = () => {
 
 
             </>
+
+            :
+
+            <></>
             ))
           }
       </div>
@@ -80,6 +87,9 @@ const ProductCocardaPDP = () => {
 
       {
           cocardas?.map((item,index)=>(
+
+            item.viewSite === "Ambos" || item.viewSite === "PDP" ?
+
             item.posicionHorizontal == "derecha" &&
 
             <>
@@ -94,6 +104,10 @@ const ProductCocardaPDP = () => {
 
 
             </>
+
+            :
+
+            <></>
             ))
           }
       </div>

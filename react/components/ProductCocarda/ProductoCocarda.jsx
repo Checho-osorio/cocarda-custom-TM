@@ -25,6 +25,9 @@ console.log('checho status', status.cocarda);
       <div className={Styles.ContentCocardas_Item__left}>
         {
           cocardas?.map((item,index)=>(
+
+            item.viewSite === "Ambos" || item.viewSite === "PLP"?
+
             item.posicionHorizontal == "izquierda" &&
             <>
               {
@@ -38,6 +41,10 @@ console.log('checho status', status.cocarda);
 
 
             </>
+
+            :
+
+            <></>
             ))
           }
       </div>
@@ -46,6 +53,9 @@ console.log('checho status', status.cocarda);
 
       {
           cocardas?.map((item,index)=>(
+
+            item.viewSite === "Ambos" || item.viewSite === "PLP" ?
+
             item.posicionHorizontal == "derecha" &&
 
             <>
@@ -60,6 +70,10 @@ console.log('checho status', status.cocarda);
 
 
             </>
+
+            :
+
+            <></>
             ))
           }
       </div>
